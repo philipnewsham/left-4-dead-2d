@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private int remainder = 0;
     private bool removingTempHealth;
     private bool isDead;
+    private bool isIncapicated;
+    private bool lastLeg;
 
     public int testDamage;
 
@@ -26,7 +28,26 @@ public class PlayerController : MonoBehaviour
         remainder = health < damage ? Mathf.Abs(health - damage) : 0;
         health = Mathf.Clamp(health - damage, 0, 100);
         temporaryHealth = Mathf.Clamp(temporaryHealth - remainder, 0, 100);
-        isDead = CheckIfDead();
+        CheckForDeath();
+        UpdateHealthUI();
+    }
+
+    void CheckForDeath()
+    {
+        if (CheckIfDead())
+        {
+            if (lastLeg)
+            {
+                isDead = true;
+            }
+            else
+            {
+                isIncapicated = true;
+                health = 0;
+                temporaryHealth = 300;
+                lastLeg = true;
+            }
+        }
         UpdateHealthUI();
     }
 
@@ -39,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         temporaryHealth = 0;
         health = health + Mathf.FloorToInt((float)(100 - health) * 0.8f);
+        lastLeg = false;
         UpdateHealthUI();
     }
 
@@ -80,7 +102,7 @@ public class PlayerController : MonoBehaviour
         healthBar.value = health + temporaryHealth;
 
         Color[] healthColours = new Color[3] { Color.green, Color.yellow, Color.red };
-        int[] healthValues = new int[3] { 66, 33, 0 };
+        int[] healthValues = new int[3] { 66, 39, 0 };
 
         for (int i = 0; i < 3; i++)
         {
