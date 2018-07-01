@@ -481,7 +481,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891129323}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9fd47459567ef48b50e3118916a6f9, type: 3}
   m_Name: 
@@ -490,6 +490,20 @@ MonoBehaviour:
   force: 1500
   parent: {fileID: 505721838}
   ammoText: {fileID: 1906185554}
+--- !u!114 &891129334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 891129323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a4e8eb24ae1f343a083de20cde46ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  molotov: {fileID: 1425134480222468, guid: e980aaa958d65bb4e8a0f93ea3b32c21, type: 2}
+  force: 500
+  parent: {fileID: 505721838}
 --- !u!1 &1009174071
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +703,22 @@ Prefab:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
@@ -940,7 +970,7 @@ GameObject:
   - component: {fileID: 1598886275}
   - component: {fileID: 1598886274}
   - component: {fileID: 1598886273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1056,7 +1086,7 @@ GameObject:
   - component: {fileID: 1698501473}
   - component: {fileID: 1698501474}
   - component: {fileID: 1698501475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletRespawn
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -1164,7 +1194,7 @@ GameObject:
   - component: {fileID: 1769679009}
   - component: {fileID: 1769679011}
   - component: {fileID: 1769679010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletRespawn
   m_TagString: Respawn
   m_Icon: {fileID: 0}
