@@ -1,0 +1,10 @@
+
+	<WeaponCollection>
+		<Weapons>
+			<Weapon name = "Pump Shotgun"> <slotType>Primary</slotType> <maxAmmo>128</maxAmmo> <clipSize>8</clipSize> </Weapon>
+			<Weapon name = "Submachine Gun"> <slotType>Primary</slotType> <maxAmmo>480</maxAmmo> <clipSize>50</clipSize> </Weapon>
+			<Weapon name = "Auto Shotgun"> <slotType>Primary</slotType> <maxAmmo>128</maxAmmo> <clipSize>10</clipSize> </Weapon>
+			<Weapon name = "Assult Rifle"> <slotType>Primary</slotType> <maxAmmo>360</maxAmmo> <clipSize>50</clipSize> </Weapon>
+			<Weapon name = "Hunting Rifle"> <slotType>Primary</slotType> <maxAmmo>150</maxAmmo> <clipSize>15</clipSize> </Weapon>
+		</Weapons>
+	</WeaponCollection>
